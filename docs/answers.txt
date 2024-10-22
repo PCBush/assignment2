@@ -1,0 +1,97 @@
+Tutorial Date: 10/21/2024
+GitHub Account Creation Date: 1/12/2013
+
+1. 
+RB@RBPC MINGW64 ~/OneDrive/Documents/GitHub/assignment2 (master)
+$ git push
+info: please complete authentication in your browser...
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 491 bytes | 491.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/PCBush/assignment2.git
+   a0f0cf0..a19ad50  master -> master
+
+
+2. Answer is 8
+RB@RBPC MINGW64 ~/OneDrive/Documents/GitHub/assignment2/docs (master)
+$ git rev-list --count HEAD
+8
+
+3. Mon Oct 21 19:53:19 2024
+$ git log -1 -- README.md
+commit a0f0cf08518dece5074f8c7866ae8cd16c91884c
+Author: PCBush <pcninjarm@gmail.com>
+Date:   Mon Oct 21 19:53:19 2024 -0500
+
+    Update README.md
+
+    Added repository owner's name and fsuID to README.md
+4.
+To work on the project without affecting the main base
+To collaborate on multiple tasks at a time
+
+5.
+git log shows the commit history while git status shows the directory status
+
+6.
+RB@RBPC MINGW64 ~/OneDrive/Documents/GitHub/assignment2 (master)
+$ git log --follow Vehicle.h
+commit 03106e92a1e36708334c69dd071088c6d0937b1d
+Author: Esteban Parra <estebanpr014@gmail.com>
+Date:   Wed Sep 11 16:58:59 2019 -0400
+
+    -> Declared the trivial destructors for all classes
+    -> Fully formatted toString methods for all classes
+    -> Added test cases in the main method for testing the implementations
+    -> Added validation on value for engine sizes in the  Car class
+
+commit f9cd890b3f89fbe5920a1fdf7da34ee915ba27b9
+Author: Esteban Parra <estebanpr014@gmail.com>
+Date:   Thu Sep 5 18:42:39 2019 -0400
+
+    -> Partial implementation of PoweredVehicle and Car
+    -> Definition of virtual functions
+
+commit f9c24b027e6275ff6a1911241014c44971b4e8d0
+Author: Esteban Parra <estebanpr014@gmail.com>
+Date:   Thu Sep 5 18:04:36 2019 -0400
+
+    Refactored Vehicle class to separate definition and declarations
+    Added mileageEstimate abstract method to Vehicle
+    Implemented the Bicycle class
+
+commit 4f6c88c953f4601929df7980a19dcdaee4f13854
+Author: Esteban Parra <estebanpr014@gmail.com>
+Date:   Thu Sep 5 14:59:19 2019 -0400
+
+    Base Vehicle class created
+
+
+7.
+RB@RBPC MINGW64 ~/OneDrive/Documents/GitHub/assignment2 (master)
+$ git log --grep="file"
+commit f4975e5d56ff331762b318bfd12c5236e0299f25 (upstream/master, upstream/HEAD)
+Author: Esteban Parra <estebanpr014@gmail.com>
+Date:   Wed Sep 25 18:33:08 2019 -0400
+
+    -> Adding an empty README.md file
+
+8.
+I A child class takes on or "inherits" the methods and attributes of its parent class.
+II Polymoprhism is the concept of multiple forms. A child may inherit a method from a parent class, but the method is overwridden to have somewhat different functionality. This is polymorphism.
+III Encapuslations is the concept of limiting access to methods and antributes to a class.
+
+9.
+The Dictator and Lieutenant Workflow has a heirarchy. All developers pull from the central repo, but only the dictator can push to it.
+The lieutenants oversee their own repositories that the developers push to.
+In the Centralized workflow, there is no heirarchy and each developer has to pull any changes in the central repo and resolve conflicts before pushing.
+
+10. 
+The Dictator and Lieutenant Workflow, with its sub repositories and heirarchichal management, can be organized in a way to prevent as many push conflicts.
+In a Centralized workflow, 100 people pushing to the same repo will make the version update very quickly.
+In the Dictator and Lieutenant Workflow, these changes are distributed to lieutenant repositories which can be managed on their own and later updated to fit the main repo.
+This could reduce the amount of time developers spend fixing conflicts.
